@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from '../sections/HeroSection';
 import Navbar from '../components/Navbar';
-import Testimonials from "../sections/Testimonials";
+// import Testimonials from "../sections/Testimonials";
 
 import Footer from '../components/Footer'
 import ServiceSection from '../sections/ServiceSection';
@@ -17,7 +17,7 @@ export default function Home() {
       <ServiceSection />
       <WhyChooseUs />
       <WhatWeFix />
-      <Testimonials />
+      
       <ContactUs />
       <Gallary />
       <Footer />

@@ -99,7 +99,7 @@ function HeroSection() {
               className="flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-105 text-white"
             >
 
-              <FaPhoneAlt className="text-3xl" />
+              <FaPhoneAlt className="text-2xl" />
 
               <span>Call Now</span>
 
