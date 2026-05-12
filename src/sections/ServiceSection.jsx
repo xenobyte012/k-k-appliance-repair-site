@@ -8,7 +8,7 @@ import {
   Coffee,
   Wind,
   Droplets,
-  Flame,
+  
 } from "lucide-react";
 
 const features = [
