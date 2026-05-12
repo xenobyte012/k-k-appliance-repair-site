@@ -8,6 +8,7 @@ import {
   Coffee,
   Wind,
   Droplets,
+  Flame,
 } from "lucide-react";
 
 const features = [
@@ -59,6 +60,12 @@ const features = [
     description:
       "Reliable gas geyser repair and installation services.",
   },
+  {
+  title: "Fireplace Repair",
+  icon: Flame,
+  description:
+    "Professional fireplace inspection, maintenance, and repair services for safe and efficient heating.",
+},
 ];
 
 function ServiceSection() {
