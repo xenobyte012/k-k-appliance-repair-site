@@ -1,11 +1,27 @@
 import React from "react";
-import heroImg from "../images/main-img.jpg"
+import {
+  ShieldCheck,
+  Wrench,
+  Clock3,
+} from "lucide-react";
+
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+import heroImg from "../images/main-img.jpg";
 
 function HeroSection() {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-    });
+  const phoneNumber = "27738715044";
+
+  const message =
+    "Hello, I am interested in your appliance repair services.";
+
+  const encodedMessage = encodeURIComponent(message);
+
+  const callNow = () => {
+    window.location.href = `tel:+${phoneNumber}`;
   };
 
   return (
@@ -21,65 +37,87 @@ function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/70 to-red-900/70"></div>
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* CONTENT */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 ">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20">
 
-        <div className="max-w-3xl backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-3xl">
 
-          {/* SMALL TOP TEXT */}
-          
+          {/* HEADING */}
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
 
-          {/* MAIN HEADING */}
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Keith and Kevin
-            <span className="text-red-400"> Appliance </span>
+            Keith & Kevin
+            <span className="text-red-500"> Appliance </span>
             Repair Services
+
           </h1>
 
           {/* DESCRIPTION */}
           <p className="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed">
-            Professional repair services for refrigerators, washing machines,
-            microwaves, stoves, and more. Fast response, affordable pricing,
-            and trusted workmanship across your area.
+            Professional repair services for fridges, washing machines,
+            microwaves, stoves, air-conditioners, and more. Fast response,
+            affordable pricing, and trusted workmanship.
           </p>
 
           {/* TRUST BADGES */}
-          <div className="flex flex-wrap gap-4 mt-6 text-sm text-gray-300">
+          <div className="flex flex-wrap gap-4 mt-6 text-sm text-gray-200">
 
-            <div className="bg-white/10 px-4 py-2 rounded-full border border-white/20">
-              ✅ Same-Day Service
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+
+              <Clock3 size={18} className="text-red-400" />
+
+              <span>Same-Day Service</span>
+
             </div>
 
-            <div className="bg-white/10 px-4 py-2 rounded-full border border-white/20">
-              🔧 Certified Technicians
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+
+              <Wrench size={18} className="text-blue-400" />
+
+              <span>Expert Technicians</span>
+
             </div>
 
-            <div className="bg-white/10 px-4 py-2 rounded-full border border-white/20">
-              ⭐ Trusted Local Experts
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+
+              <ShieldCheck size={18} className="text-green-400" />
+
+              <span>Trusted Repairs</span>
+
             </div>
+
           </div>
 
           {/* BUTTONS */}
           <div className="mt-10 flex flex-col sm:flex-row gap-5">
 
-            {/* PRIMARY BUTTON */}
+            {/* CALL BUTTON */}
             <button
-              onClick={scrollToContact}
-              className="bg-red-500 hover:bg-red-600 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:scale-105"
+              onClick={callNow}
+              className="flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-105 text-white"
             >
-              Book a Repair
+
+              <FaPhoneAlt className="text-3xl" />
+
+              <span>Call Now</span>
+
             </button>
 
-            {/* SECONDARY BUTTON */}
-            <button
-              onClick={scrollToContact}
-              className="bg-blue-600 hover:bg-blue-700 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:scale-105"
+            {/* WHATSAPP BUTTON */}
+            <a
+              href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-105 text-white"
             >
-              WhatsApp Us
-            </button>
+
+              <FaWhatsapp className="text-4xl" />
+
+              <span>WhatsApp Us</span>
+
+            </a>
 
           </div>
         </div>
