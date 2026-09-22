@@ -101,7 +101,7 @@ function ContactUs() {
 
             {/* EMAIL */}
             <a
-              href="mailto:kelvinapplices@gmail.com"
+              href="mailto:kelvinapplinces@gmail.com"
               className="w-full bg-white/10 hover:bg-white/20 transition backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-4 shadow-lg"
             >
               <div className="bg-gradient-to-br from-blue-600 to-red-500 p-4 rounded-xl">
@@ -111,7 +111,7 @@ function ContactUs() {
               <div>
                 <p className="font-semibold text-white text-lg">Email Us</p>
 
-                <p className="text-gray-300">kelvinapplices@gmail.com</p>
+                <p className="text-gray-300">kelvinapplinces@gmail.com</p>
               </div>
             </a>
 

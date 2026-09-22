@@ -110,11 +110,11 @@ function Footer() {
               </a>
 
               <a
-                href="mailto:kelvinapplices@gmail.com"
+                href="mailto:kelvinapplinces@gmail.com"
                 className="flex items-center gap-2 hover:text-red-400 transition-colors duration-200 break-all"
               >
                 <HiOutlineMail className="w-5 h-5 text-red-400 shrink-0" />
-                <span>kelvinapplices@gmail.com</span>
+                <span>kelvinapplinces@gmail.com</span>
               </a>
             </div>
 
