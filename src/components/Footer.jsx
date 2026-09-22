@@ -1,5 +1,10 @@
 ﻿import React from "react";
 import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import {
+  HiOutlineLocationMarker,
+  HiOutlinePhone,
+  HiOutlineMail,
+} from "react-icons/hi";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,7 +45,6 @@ function Footer() {
 
   return (
     <footer className="relative py-20 px-6 overflow-hidden">
-
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-red-950"></div>
 
@@ -50,10 +54,8 @@ function Footer() {
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto">
-
         {/* TOP GRID */}
         <div className="grid md:grid-cols-3 gap-12 mb-16">
-
           {/* BRAND */}
           <div>
             <h3 className="text-3xl font-extrabold text-white mb-4">
@@ -72,19 +74,19 @@ function Footer() {
               Quick Links
             </h4>
 
-            <div className="flex flex-col gap-3">
-
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-red-400 transition"
-                >
-                  {link.name}
-                </a>
-              ))}
-
-            </div>
+            <nav aria-label="Footer navigation">
+              <div className="flex flex-col gap-3">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-gray-300 hover:text-red-400 transition-colors duration-200 w-fit"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </nav>
           </div>
 
           {/* CONTACT */}
@@ -93,40 +95,60 @@ function Footer() {
               Contact Us
             </h4>
 
-            <div className="text-gray-300 space-y-2 text-sm">
-              <p>📍 South Africa</p>
-              <p>📞 073 871 5044</p>
-              <p>📧 keithkevinrepair@gmail.com</p>
+            <div className="text-gray-300 space-y-3 text-sm">
+              <p className="flex items-center gap-2">
+                <HiOutlineLocationMarker className="w-5 h-5 text-red-400 shrink-0" />
+                <span>South Africa</span>
+              </p>
+
+              <a
+                href="tel:+27738715044"
+                className="flex items-center gap-2 hover:text-red-400 transition-colors duration-200"
+              >
+                <HiOutlinePhone className="w-5 h-5 text-red-400 shrink-0" />
+                <span>073 871 5044</span>
+              </a>
+
+              <a
+                href="mailto:kelvinapplices@gmail.com"
+                className="flex items-center gap-2 hover:text-red-400 transition-colors duration-200 break-all"
+              >
+                <HiOutlineMail className="w-5 h-5 text-red-400 shrink-0" />
+                <span>kelvinapplices@gmail.com</span>
+              </a>
             </div>
 
             {/* SOCIALS */}
             <div className="flex gap-5 mt-6">
-
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit our ${social.name} page`}
                   className={`text-white transition transform hover:scale-110 ${social.color}`}
                 >
                   <social.icon className="w-6 h-6" />
                 </a>
               ))}
-
             </div>
           </div>
         </div>
 
         {/* DIVIDER */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-
-          <p>© {currentYear} Keith and Kevin Appliance Repair. All rights reserved.</p>
-
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-400">
           <p>
-            Designed By <span className="  text-blue-800 ">Xenobyte Web Studio</span>
+            © {currentYear} Keith and Kevin Appliance Repair. All rights
+            reserved.
           </p>
 
+          <p>
+            Designed By{" "}
+            <span className="text-blue-400 font-medium">
+              Xenobyte Web Studio
+            </span>
+          </p>
         </div>
       </div>
     </footer>
