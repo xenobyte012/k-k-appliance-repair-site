@@ -13,7 +13,7 @@ import {
 import heroImg from "../images/main-img.jpg";
 
 function HeroSection() {
-  const phoneNumber = "27738715044";
+  const phoneNumber = "27647326081";
 
   const message =
     "Hello, I am interested in your appliance repair services.";

@@ -9,7 +9,7 @@ function ContactUs() {
 
   const [loading, setLoading] = useState(false);
 
-  const phoneNumber = "27738715044";
+  const phoneNumber = "27647326081";
 
   const message = "Hello, I am interested in your appliance repair services.";
 
@@ -95,13 +95,13 @@ function ContactUs() {
               <div>
                 <p className="font-semibold text-white text-lg">Call Us</p>
 
-                <p className="text-gray-300">073 871 5044</p>
+                <p className="text-gray-300">064 732 6081</p>
               </div>
             </button>
 
             {/* EMAIL */}
             <a
-              href="mailto:kelvinapplinces@gmail.com"
+              href="mailto:keithushertakas@gmail.com"
               className="w-full bg-white/10 hover:bg-white/20 transition backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-4 shadow-lg"
             >
               <div className="bg-gradient-to-br from-blue-600 to-red-500 p-4 rounded-xl">
@@ -111,7 +111,7 @@ function ContactUs() {
               <div>
                 <p className="font-semibold text-white text-lg">Email Us</p>
 
-                <p className="text-gray-300">kelvinapplinces@gmail.com</p>
+                <p className="text-gray-300">keithushertakas@gmail.com</p>
               </div>
             </a>
 
