@@ -114,7 +114,7 @@ function Footer() {
                 className="flex items-center gap-2 hover:text-red-400 transition-colors duration-200 break-all"
               >
                 <HiOutlineMail className="w-5 h-5 text-red-400 shrink-0" />
-                <span>kelvinapplinces@gmail.com</span>
+                <span>keithushertakas@gmail.com</span>
               </a>
             </div>
 
